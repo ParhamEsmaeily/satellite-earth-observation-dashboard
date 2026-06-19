@@ -7,6 +7,12 @@ The app presents a cinematic satellite landing page and a dark-themed operations
 ## Features
 
 ### Landing Page
+<img src="screenshots/landing-page.png" alt="Satellite Earth Observation landing page" width="900" />
+
+### Dashboard Overview
+<img src="screenshots/dashboard-overview.png" alt="Satellite Earth Observation dashboard overview" width="900" />
+
+### Landing Page
 
 - Dark space-themed hero section
 - Animated Earth/satellite visual built with Three.js
