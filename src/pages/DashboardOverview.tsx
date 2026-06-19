@@ -1,4 +1,5 @@
 import KPICards from '../components/KPICards';
+import MapOverview from '../components/MapOverview';
 
 export default function DashboardOverview() {
   return (
@@ -10,9 +11,7 @@ export default function DashboardOverview() {
         </button>
       </div>
       <KPICards />
-      <div className="rounded-2xl border border-white/10 bg-surface p-6 text-slate-400">
-        Dashboard modules will be added in the next commits.
-      </div>
+      <MapOverview />
     </div>
   );
 }
