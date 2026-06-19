@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Search, Bell, Menu, X, Settings, User, Eye, ShieldAlert, CheckCircle } from 'lucide-react';
+import { Search, Bell, Menu, X, Settings, User, Eye, ShieldAlert, CheckCircle, Home } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Topbar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -47,6 +48,14 @@ export default function Topbar() {
             <Menu size={24} />
           </button>
           
+          <Link
+            to="/"
+            className="hidden md:flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-sm font-medium text-slate-300 hover:border-primary/40 hover:bg-primary/10 hover:text-white transition-all"
+          >
+            <Home size={16} />
+            <span>Home</span>
+          </Link>
+          
           <div className="relative hidden md:block">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" size={18} />
             <input 
@@ -82,7 +91,7 @@ export default function Topbar() {
 
       {/* Success Alert Toast Notification */}
       {successToast && (
-        <div className="fixed top-6 right-6 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 px-4 py-3.5 rounded-xl shadow-2xl z-50 flex items-center gap-3 font-semibold animate-in slide-in-from-top-4 duration-300">
+        <div className="fixed left-1/2 top-24 -translate-x-1/2 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 px-5 py-3.5 rounded-xl shadow-2xl z-50 flex items-center gap-3 font-semibold animate-in slide-in-from-top-4 duration-300">
           <CheckCircle size={18} />
           <span>Dashboard Settings Saved!</span>
         </div>
