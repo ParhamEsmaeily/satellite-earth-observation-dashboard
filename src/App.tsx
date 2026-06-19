@@ -8,8 +8,10 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        
         <Route path="/dashboard" element={<DashboardLayout />}>
           <Route index element={<DashboardOverview />} />
+          {/* Placeholders for other routes */}
           <Route path="regions" element={<div className="text-white p-4">Regions coming soon</div>} />
           <Route path="imagery" element={<div className="text-white p-4">Imagery coming soon</div>} />
           <Route path="alerts" element={<div className="text-white p-4">Alerts coming soon</div>} />
