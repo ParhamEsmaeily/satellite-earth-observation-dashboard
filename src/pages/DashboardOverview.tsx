@@ -1,6 +1,9 @@
 import KPICards from '../components/KPICards';
 import MapOverview from '../components/MapOverview';
 import ChangeDetection from '../components/ChangeDetection';
+import RecentAlerts from '../components/RecentAlerts';
+import LatestImagery from '../components/LatestImagery';
+import AcquisitionsChart from '../components/AcquisitionsChart';
 
 export default function DashboardOverview() {
   return (
@@ -11,15 +14,25 @@ export default function DashboardOverview() {
           Generate Report
         </button>
       </div>
-
+      
       <KPICards />
-
+      
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
         <div className="xl:col-span-2">
           <MapOverview />
         </div>
         <div>
           <ChangeDetection />
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
+        <div className="xl:col-span-1">
+          <RecentAlerts />
+        </div>
+        <div className="xl:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <LatestImagery />
+          <AcquisitionsChart />
         </div>
       </div>
     </div>
