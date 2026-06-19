@@ -1,5 +1,6 @@
 import KPICards from '../components/KPICards';
 import MapOverview from '../components/MapOverview';
+import ChangeDetection from '../components/ChangeDetection';
 
 export default function DashboardOverview() {
   return (
@@ -10,8 +11,17 @@ export default function DashboardOverview() {
           Generate Report
         </button>
       </div>
+
       <KPICards />
-      <MapOverview />
+
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
+        <div className="xl:col-span-2">
+          <MapOverview />
+        </div>
+        <div>
+          <ChangeDetection />
+        </div>
+      </div>
     </div>
   );
 }
